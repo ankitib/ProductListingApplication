@@ -1,0 +1,6 @@
+<% @products.each do |product| %>
+     <%= link_to product_path(product), remote: true, class: "list-group-item"  do %> 
+        <h4 class="list-group-item-heading"><%= product.name %></h4>
+        <p class="list-group-item-text"><%= number_to_currency product.price %></p>
+<% end %>
+<% end %>
